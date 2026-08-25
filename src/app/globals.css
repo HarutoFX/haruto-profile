@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+
+  --accent: #ef3340;
+  --accent-rgb: 239, 51, 64;
+
+  --background-base: #020000;
+  --background-secondary: #100205;
+
+  --background-glow-1: #5f0710;
+  --background-glow-2: #2b0208;
+
+  --stars-rgb: 255, 215, 218;
+
+  --grid: rgba(239, 51, 64, 0.035);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background: #000;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(180, 20, 35, 0.45);
+  color: white;
+}
+
+/* =========================================================
+   CUSTOM CURSOR
+   ========================================================= */
+
+@media (pointer: fine) {
+  html,
+  body,
+  *,
+  *::before,
+  *::after {
+    cursor: none !important;
+  }
+}
+
+/* =========================================================
+   HARUTO NAME
+   ========================================================= */
+
+.haruto-name {
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+
+  text-shadow:
+    0 0 12px rgba(255, 255, 255, 0.08),
+    0 0 28px rgba(239, 51, 64, 0.12),
+    0 0 55px rgba(239, 51, 64, 0.06);
+
+  transition:
+    letter-spacing 0.45s ease,
+    text-shadow 0.45s ease,
+    transform 0.45s ease;
+}
+
+.haruto-name:hover {
+  letter-spacing: 0.07em;
+
+  text-shadow:
+    0 0 16px rgba(255, 255, 255, 0.16),
+    0 0 32px rgba(239, 51, 64, 0.22),
+    0 0 65px rgba(239, 51, 64, 0.12);
+
+  transform: translateY(-1px);
+}
